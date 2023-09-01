@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+    <script src="../js/navbar.js" defer></script>
+  </head>
+  <body class="bg-gray-900">
+    <nav
+      class="relative flex flex-col gap-6 sm:flex-row w-full justify-between items-start sm:items-center bg-neutral-200 py-2 text-neutral-500 shadow-lg focus:text-neutral-700 dark:bg-gray-800 lg:py-4"
+      data-te-navbar-ref
+    >
+      <div class="flex">
+        <!-- Avatar -->
+        <div class="w-fit relative ml-5" data-te-dropdown-ref>
+          <a
+            class="hidden-arrow flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-te-dropdown-toggle-ref
+            aria-expanded="false"
+          >
+            <img
+              src="https://tecdn.b-cdn.net/img/Photos/Avatars/img (31).webp"
+              class="rounded-full"
+              style="height: 22px; width: 22px"
+              alt="Avatar"
+              loading="lazy"
+            />
+            <span class="w-2 pl-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="h-5 w-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </span>
+          </a>
+          <ul
+            id="nav-menu"
+            class="absolute left-0 right-auto z-[1000] float-left m-0 hidden min-w-[10rem] list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-gray-700 [&[data-te-dropdown-show]]:block"
+            aria-labelledby="dropdownMenuButton2"
+            data-te-dropdown-menu-ref
+          >
+            <li>
+              <a
+                class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-gray-700 hover:bg-gray-100 active:text-zinc-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-gray-400 dark:text-gray-200 dark:hover:bg-white/30"
+                href="../profile/"
+                data-te-dropdown-item-ref
+                >My profile</a
+              >
+            </li>
+            <li>
+              <a
+                class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-gray-700 hover:bg-gray-100 active:text-zinc-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-gray-400 dark:text-gray-200 dark:hover:bg-white/30"
+                href="#"
+                data-te-dropdown-item-ref
+                >Settings</a
+              >
+            </li>
+            <li>
+              <a
+                class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-gray-700 hover:bg-gray-100 active:text-zinc-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-gray-400 dark:text-gray-200 dark:hover:bg-white/30"
+                href="../index.html"
+                data-te-dropdown-item-ref
+                >Logout</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <a
+          class="ml-8 p-0 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+          href="../feed/"
+          data-te-nav-link-ref
+          >Home</a
+        >
+      </div>
+
+      <!-- Search bar -->
+
+      <div class="flex w-full sm:w-72 items-center justify-between">
+        <input
+          type="search"
+          class="ml-5 relative m-0 block min-w-0 flex-auto rounded border border-solid border-neutral-300 bg-white bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none motion-reduce:transition-none dark:border-neutral-500 dark:text-neutral-200 dark:placeholder:text-neutral-400 dark:focus:border-primary"
+          placeholder="Search"
+          aria-label="Search"
+          aria-describedby="button-addon2"
+        />
+
+        <!--Search icon-->
+        <span
+          class="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-neutral-700 dark:text-neutral-200"
+          id="basic-addon2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="h-5 w-5"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </span>
+      </div>
+    </nav>
+    <!-- Profile -->
+    <div
+      class="max-w-2xl mx-4 md:mx-auto lg:mx-auto xl:mx-auto my-16 bg-white shadow-xl rounded-lg text-gray-900 pb-8"
+    >
+      <div class="rounded-t-lg h-32 overflow-hidden">
+        <img
+          class="object-cover object-top w-full"
+          src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+          alt="Mountain"
+        />
+      </div>
+      <div
+        class="mx-auto w-32 h-32 relative -mt-16 border-4 border-white rounded-full overflow-hidden"
+      >
+        <img
+          class="object-cover object-center h-32"
+          src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+          alt="Woman looking front"
+        />
+      </div>
+      <div class="text-center mt-2">
+        <h2 class="font-semibold">Sarah Smith</h2>
+        <p class="text-gray-500">Freelance Web Designer</p>
+      </div>
+      <ul
+        class="py-4 mt-2 text-gray-700 flex items-center justify-center gap-12"
+      >
+        <li class="flex flex-col items-center justify-around">
+          <svg
+            class="w-4 fill-current text-blue-900"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"
+            />
+          </svg>
+          <div>2k</div>
+        </li>
+        <li class="flex flex-col items-center justify-between">
+          <svg
+            class="w-4 fill-current text-blue-900"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M7 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 1c2.15 0 4.2.4 6.1 1.09L12 16h-1.25L10 20H4l-.75-4H2L.9 10.09A17.93 17.93 0 0 1 7 9zm8.31.17c1.32.18 2.59.48 3.8.92L18 16h-1.25L16 20h-3.96l.37-2h1.25l1.65-8.83zM13 0a4 4 0 1 1-1.33 7.76 5.96 5.96 0 0 0 0-7.52C12.1.1 12.53 0 13 0z"
+            />
+          </svg>
+          <div>10k</div>
+        </li>
+        <li class="flex flex-col items-center justify-around">
+          <svg
+            class="w-4 fill-current text-blue-900"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z"
+            />
+          </svg>
+          <div>15</div>
+        </li>
+      </ul>
+      <div class="p-4 border-t mx-8 mt-2">
+        <button
+          class="w-1/2 block mx-auto rounded-full bg-gray-900 hover:shadow-lg font-semibold text-white px-6 py-2"
+        >
+          Follow
+        </button>
+      </div>
+      <div
+        class="mx-4 min-h-screen flex flex-col justify-center items-center gap-6"
+      >
+        <h1 class="text-2xl self-start mt-8 font-bold mb-2">Posts</h1>
+        <div
+          class="max-w-2xl container bg-white rounded-xl shadow-lg transform transition duration-500 hover:shadow-2xl"
+        >
+          <div>
+            <span
+              class="text-white text-xs font-bold rounded-lg bg-green-500 inline-block mt-4 ml-4 py-1.5 px-4 cursor-pointer"
+              >Home</span
+            >
+            <h1
+              class="text-2xl mt-2 ml-4 font-bold text-gray-800 cursor-pointer hover:text-gray-900 transition duration-100"
+            >
+              Ballonger!!! Hurra!!
+            </h1>
+            <p
+              class="ml-4 mt-1 mb-2 text-gray-700 hover:underline cursor-pointer"
+            >
+              #Bursdag
+            </p>
+          </div>
+          <img
+            class="w-full cursor-pointer"
+            src="https://images.unsplash.com/photo-1525268771113-32d9e9021a97?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            alt=""
+          />
+          <div class="flex p-4 justify-between">
+            <div class="flex items-center space-x-2">
+              <img
+                class="w-10 rounded-full"
+                src="https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_3.jpg"
+                alt="sara"
+              />
+              <h2 class="text-gray-800 font-bold cursor-pointer">
+                Felipe Sacudon
+              </h2>
+            </div>
+            <div class="flex space-x-2">
+              <div class="flex space-x-1 items-center">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-7 w-7 text-gray-600 cursor-pointer"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                    />
+                  </svg>
+                </span>
+                <span>22</span>
+              </div>
+              <div class="flex space-x-1 items-center">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-7 w-7 text-red-500 hover:text-red-400 transition duration-100 cursor-pointer"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span>20</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="max-w-2xl container bg-white rounded-xl shadow-lg transform transition duration-500 hover:shadow-2xl"
+        >
+          <div>
+            <span
+              class="text-white text-xs font-bold rounded-lg bg-green-500 inline-block mt-4 ml-4 py-1.5 px-4 cursor-pointer"
+              >Home</span
+            >
+            <h1
+              class="text-2xl mt-2 ml-4 font-bold text-gray-800 cursor-pointer hover:text-gray-900 transition duration-100"
+            >
+              Ballonger!!! Hurra!!
+            </h1>
+            <p
+              class="ml-4 mt-1 mb-2 text-gray-700 hover:underline cursor-pointer"
+            >
+              #Bursdag
+            </p>
+          </div>
+          <img
+            class="w-full cursor-pointer"
+            src="https://images.unsplash.com/photo-1525268771113-32d9e9021a97?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            alt=""
+          />
+          <div class="flex p-4 justify-between">
+            <div class="flex items-center space-x-2">
+              <img
+                class="w-10 rounded-full"
+                src="https://d2qp0siotla746.cloudfront.net/img/use-cases/profile-picture/template_3.jpg"
+                alt="sara"
+              />
+              <h2 class="text-gray-800 font-bold cursor-pointer">
+                Felipe Sacudon
+              </h2>
+            </div>
+            <div class="flex space-x-2">
+              <div class="flex space-x-1 items-center">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-7 w-7 text-gray-600 cursor-pointer"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                    />
+                  </svg>
+                </span>
+                <span>22</span>
+              </div>
+              <div class="flex space-x-1 items-center">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-7 w-7 text-red-500 hover:text-red-400 transition duration-100 cursor-pointer"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span>20</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- My posts -->
+  </body>
+</html>
